@@ -12,11 +12,12 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.label.string = this.text;
+         
         WXSdk.checkIsUserAdvisedToRest();
         WXSdk.onShow();
         WXSdk.onShareAppMessage();
         WXSdk.showShareMenu();
+         
     },
 
     // called every frame

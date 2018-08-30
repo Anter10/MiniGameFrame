@@ -18,7 +18,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function onLoad() {
-        this.label.string = this.text;
+
         WXSdk.checkIsUserAdvisedToRest();
         WXSdk.onShow();
         WXSdk.onShareAppMessage();

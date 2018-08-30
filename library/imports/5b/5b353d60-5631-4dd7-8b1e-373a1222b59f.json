@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ArcEgg",
+    "texture": "fc0aaed5-9870-4779-ba3b-705c83768f46",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      82,
+      118
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      82,
+      118
+    ]
+  }
+}
