@@ -5,10 +5,10 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 266,
-      "y": 614,
+      "x": 328,
+      "y": 472,
       "width": 1116,
-      "height": 798,
+      "height": 877,
       "layout": {
         "children": [
           {
@@ -18,7 +18,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 354,
+                "height": 392.984375,
                 "type": "panel",
                 "width": 223
               },
@@ -27,12 +27,12 @@
                 "children": [
                   "assets"
                 ],
-                "height": 350,
+                "height": 390,
                 "type": "panel",
                 "width": 223
               }
             ],
-            "height": 707,
+            "height": 786,
             "type": "dock-v",
             "width": 223
           },
@@ -43,9 +43,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 437.984375,
+                "height": 324,
                 "type": "panel",
-                "width": 570.984375
+                "width": 560
               },
               {
                 "active": 0,
@@ -53,23 +53,23 @@
                   "console",
                   "timeline"
                 ],
-                "height": 266,
+                "height": 459,
                 "type": "panel",
-                "width": 570.984375
+                "width": 560
               }
             ],
-            "height": 707,
+            "height": 786,
             "type": "dock-v",
-            "width": 570.984375
+            "width": 560
           },
           {
             "active": 0,
             "children": [
               "inspector"
             ],
-            "height": 707,
+            "height": 786,
             "type": "panel",
-            "width": 310
+            "width": 321
           }
         ],
         "type": "dock-h"
@@ -82,18 +82,19 @@
         "assets",
         "scene"
       ]
-    }
+    },
+    "window-1535821487735": {}
   },
   "panels": {
     "builder": {
-      "x": 850,
-      "y": 23,
+      "x": 827,
+      "y": 35,
       "width": 500,
       "height": 667
     },
     "project-settings": {
-      "x": 545,
-      "y": 114,
+      "x": 464,
+      "y": 68,
       "width": 600,
       "height": 548
     },

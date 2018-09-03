@@ -9,6 +9,10 @@ cc.Class({
             type: cc.Node,
             default: null,
         },
+        drawPhyNode:{
+             type: cc.Node,
+                 default: null,
+        }
     },
 
     // use this for initialization
@@ -19,12 +23,13 @@ cc.Class({
         this.strokeColor = cc.color(0, 0, 0);
         this.isClearMode = false;
         this.prepoint = null;
-
-        this.Graphics = this.nodeP.getComponent(cc.Graphics);
+        self.drawPhyNode.getComponent(cc.RigidBody).gravityScale = 0;
+        this.Graphics = this.drawPhyNode.getComponent(cc.Graphics);
         console.log("Graphics  = " + this.Graphics.lineTo)
         this.Graphics.lineWidth = 10;
         this.Graphics.fillColor.fromHEX('#ff0000');
-
+        this.chain = this.drawPhyNode.getComponent(cc.PhysicsChainCollider);
+        console.log("当前的所有店 = " + JSON.stringify(this.chain.points));
         this.Graphics.lineWidth = 10;
         this.Graphics.fillColor.fromHEX('#ff0000');
 
@@ -49,8 +54,9 @@ cc.Class({
         physicsManager.enabled = true;
 
         physicsManager.debugDrawFlags = cc.PhysicsManager.DrawBits.e_jointBit | cc.PhysicsManager.DrawBits.e_shapeBit;
-        physicsManager.gravity = cc.v2(0, -9.8);
-
+        physicsManager.gravity = cc.v2(0, 0);
+        this.hysic = physicsManager;
+        
         var manager = cc.director.getCollisionManager();
         // manager.enabled = true;
         // manager.enabledDebugDraw = true;
@@ -59,200 +65,13 @@ cc.Class({
         let height = this.size.height || this.node.height;
 
         let node = new cc.Node();
-        this.allloads = [{
-            "x": 572.16,
-            "y": 952.3199999999999
-        }, {
-            "x": 574.0799999999999,
-            "y": 965.7599999999999
-        }, {
-            "x": 579.8399999999999,
-            "y": 975.3599999999999
-        }, {
-            "x": 581.76,
-            "y": 983.04
-        }, {
-            "x": 583.68,
-            "y": 992.6399999999999
-        }, {
-            "x": 589.4399999999999,
-            "y": 1004.16
-        }, {
-            "x": 568.3199999999999,
-            "y": 973.4399999999999
-        }, {
-            "x": 558.7199999999999,
-            "y": 958.0799999999999
-        }, {
-            "x": 533.76,
-            "y": 929.28
-        }, {
-            "x": 512.64,
-            "y": 911.9999999999999
-        }, {
-            "x": 495.35999999999996,
-            "y": 896.64
-        }, {
-            "x": 479.99999999999994,
-            "y": 883.1999999999999
-        }, {
-            "x": 464.64,
-            "y": 875.52
-        }, {
-            "x": 453.11999999999995,
-            "y": 867.8399999999999
-        }, {
-            "x": 441.59999999999997,
-            "y": 860.16
-        }, {
-            "x": 433.91999999999996,
-            "y": 858.2399999999999
-        }, {
-            "x": 428.15999999999997,
-            "y": 854.4
-        }, {
-            "x": 420.47999999999996,
-            "y": 852.4799999999999
-        }, {
-            "x": 414.71999999999997,
-            "y": 852.4799999999999
-        }, {
-            "x": 410.88,
-            "y": 850.56
-        }, {
-            "x": 407.03999999999996,
-            "y": 846.7199999999999
-        }, {
-            "x": 353.28,
-            "y": 839.04
-        }, {
-            "x": 368.64,
-            "y": 800.64
-        }, {
-            "x": 380.15999999999997,
-            "y": 777.5999999999999
-        }, {
-            "x": 389.76,
-            "y": 754.56
-        }, {
-            "x": 403.2,
-            "y": 731.52
-        }, {
-            "x": 410.88,
-            "y": 712.3199999999999
-        }, {
-            "x": 474.23999999999995,
-            "y": 528
-        }, {
-            "x": 481.91999999999996,
-            "y": 566.4
-        }, {
-            "x": 481.91999999999996,
-            "y": 581.76
-        }, {
-            "x": 481.91999999999996,
-            "y": 612.4799999999999
-        }, {
-            "x": 481.91999999999996,
-            "y": 639.3599999999999
-        }, {
-            "x": 481.91999999999996,
-            "y": 660.4799999999999
-        }, {
-            "x": 481.91999999999996,
-            "y": 673.92
-        }, {
-            "x": 481.91999999999996,
-            "y": 683.52
-        }, {
-            "x": 481.91999999999996,
-            "y": 689.28
-        }, {
-            "x": 481.91999999999996,
-            "y": 691.1999999999999
-        }, {
-            "x": 481.91999999999996,
-            "y": 696.9599999999999
-        }, {
-            "x": 479.99999999999994,
-            "y": 704.64
-        }, {
-            "x": 479.99999999999994,
-            "y": 708.4799999999999
-        }, {
-            "x": 479.99999999999994,
-            "y": 714.2399999999999
-        }, {
-            "x": 476.15999999999997,
-            "y": 716.16
-        }, {
-            "x": 556.8,
-            "y": 965.7599999999999
-        }, {
-            "x": 568.3199999999999,
-            "y": 919.68
-        }, {
-            "x": 574.0799999999999,
-            "y": 896.64
-        }, {
-            "x": 581.76,
-            "y": 865.92
-        }, {
-            "x": 583.68,
-            "y": 839.04
-        }, {
-            "x": 587.52,
-            "y": 814.0799999999999
-        }, {
-            "x": 587.52,
-            "y": 800.64
-        }, {
-            "x": 587.52,
-            "y": 792.9599999999999
-        }, {
-            "x": 587.52,
-            "y": 785.28
-        }, {
-            "x": 299.52,
-            "y": 1092.48
-        }, {
-            "x": 44.16,
-            "y": 1046.3999999999999
-        }, {
-            "x": 84.47999999999999,
-            "y": 1006.0799999999999
-        }, {
-            "x": 126.71999999999998,
-            "y": 954.2399999999999
-        }, {
-            "x": 153.6,
-            "y": 921.5999999999999
-        }, {
-            "x": 174.72,
-            "y": 892.8
-        }, {
-            "x": 192,
-            "y": 867.8399999999999
-        }, {
-            "x": 203.51999999999998,
-            "y": 852.4799999999999
-        }, {
-            "x": 211.2,
-            "y": 842.88
-        }, {
-            "x": 213.11999999999998,
-            "y": 837.1199999999999
-        }, {
-            "x": 215.04,
-            "y": 837.1199999999999
-        }];
-
+         
 
         //   this.Graphics.fill();
         // 将此节点设置成静态刚体
         let body = node.addComponent(cc.RigidBody);
         body.type = cc.RigidBodyType.Static;
-
+        this.chain.points = [];
         if (this.mouseJoint) {
             // add mouse joint
             let joint = node.addComponent(cc.MouseJoint);
@@ -311,26 +130,39 @@ cc.Class({
 
         // 获取触摸点数据
         var touchLoc = touch.getLocation();
+         self.hysic.gravity = cc.v2(0, 0);
+        self.chain.points = [];
         self.allloads = [];
         self.Graphics.clear()
         self.Graphics.lineWidth = 10;
         self.Graphics.fillColor.fromHEX('#ff0000');
-        self.Graphics.moveTo(touchLoc.x - 360, touchLoc.y - 640);
-        self.allloads[self.allloads.length] = touchLoc;
+        var tx = (touchLoc.x - 360);
+        var ty = (touchLoc.y - 640);
+        self.Graphics.moveTo(tx, ty);
+         self.drawPhyNode.position = cc.p(tx, ty);
+        self.allloads[self.allloads.length] = cc.p(tx,ty);
+       
+        self.drawPhyNode.getComponent(cc.RigidBody).gravityScale = 0;
         return true;
     },
     onTouchMoved: function (touch, event) {
-
+self.hysic.gravity = cc.v2(0, 0);
         // 获取触摸点数据
         var touchLoc = touch.getLocation();
-        self.allloads[self.allloads.length] = touchLoc;
-        self.Graphics.lineTo(touchLoc.x - 360, touchLoc.y - 640);
+          var tx = (touchLoc.x - 360);
+          var ty = (touchLoc.y - 640);
+        self.allloads[self.allloads.length] = cc.p(tx, ty);
+        self.Graphics.lineTo(tx, ty);
         self.Graphics.stroke();
     },
 
     onTouchEnded: function (touch, event) {
         console.log("jieshu " + JSON.stringify(self.allloads))
         self.Graphics.close();
+        self.chain.points = self.allloads;
+        self.chain.apply();
+        self.hysic.gravity = cc.v2(0, -320);
+        self.drawPhyNode.getComponent(cc.RigidBody).gravityScale = 5;
     },
    
     cleardraw:function(){
