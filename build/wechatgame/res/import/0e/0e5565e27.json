@@ -1,1 +1,287 @@
-[[{"__type__":"cc.Prefab","_name":"goldcoin","data":{"__id__":1}},{"__type__":"cc.Node","_name":"goldcoin","_children":[{"__id__":2},{"__id__":3}],"_level":1,"_components":[{"__type__":"cc.RigidBody","node":{"__id__":1},"_allowSleep":false,"enabledContactListener":true},{"__type__":"cc.PhysicsCircleCollider","node":{"__id__":1},"_friction":0.1,"_restitution":1},{"__type__":"6a0c4GXwbRKVq/o6WXxBEX+","node":{"__id__":1},"label":{"__id__":4}}],"_prefab":{"__type__":"cc.PrefabInfo","root":{"__id__":1},"asset":{"__uuid__":"172FLCu7ZBeZfUdQQufagi"},"fileId":"57Qqd3e4RJsLsocs1k05CE"},"_scale":{"__type__":"cc.Vec3","x":1,"y":1,"z":1},"groupIndex":3},{"__type__":"cc.Node","_name":"gold","_parent":{"__id__":1},"_level":2,"_components":[{"__type__":"cc.Sprite","node":{"__id__":2},"_spriteFrame":{"__uuid__":"a7F3ZqgbtMZ7QXau4AW1JU"},"_sizeMode":0}],"_prefab":{"__type__":"cc.PrefabInfo","root":{"__id__":1},"asset":{"__uuid__":"172FLCu7ZBeZfUdQQufagi"},"fileId":"e1lPWupK5Cu7v4Pish/k9/"},"_contentSize":{"__type__":"cc.Size","width":40,"height":40},"_scale":{"__type__":"cc.Vec3","x":1,"y":1,"z":1}},{"__type__":"cc.Node","_name":"label","_parent":{"__id__":1},"_level":2,"_components":[{"__id__":4}],"_prefab":{"__type__":"cc.PrefabInfo","root":{"__id__":1},"asset":{"__uuid__":"172FLCu7ZBeZfUdQQufagi"},"fileId":"c7K+kSDWlE+5wHnSiBy4VM"},"_contentSize":{"__type__":"cc.Size","width":63.62,"height":40},"_scale":{"__type__":"cc.Vec3","x":1,"y":1,"z":1}},{"__type__":"cc.Label","node":{"__id__":3},"_srcBlendFactor":1,"_useOriginalSize":false,"_string":"Label","_N$string":"Label","_fontSize":26,"_N$horizontalAlign":1,"_N$verticalAlign":1}],[{"__type__":"cc.SceneAsset","_name":"test","scene":{"__id__":1},"asyncLoadAssets":null},{"__type__":"cc.Scene","_name":"New Node","_children":[{"__id__":2}],"_anchorPoint":{"__type__":"cc.Vec2"},"_scale":{"__type__":"cc.Vec3","x":0.22421875,"y":0.22421875,"z":1},"autoReleaseAssets":false},{"__type__":"cc.Node","_name":"Canvas","_parent":{"__id__":1},"_children":[{"__id__":3}],"_components":[{"__type__":"cc.Canvas","node":{"__id__":2},"_designResolution":{"__type__":"cc.Size","width":720,"height":1280}},{"__type__":"f20e9mCoPNLeILhNkAPYAKF","node":{"__id__":2},"goldprefab":{"__uuid__":"172FLCu7ZBeZfUdQQufagi"}}],"_contentSize":{"__type__":"cc.Size","width":720,"height":1280},"_position":{"__type__":"cc.Vec3","x":360,"y":640},"_scale":{"__type__":"cc.Vec3","x":1,"y":1,"z":1},"_id":"f4b8VvlgxDSL2n8yojLaly"},{"__type__":"cc.Node","_name":"Main Camera","_parent":{"__id__":2},"_level":1,"_components":[{"__type__":"cc.Camera","node":{"__id__":3},"_clearFlags":7,"_depth":-1}],"_scale":{"__type__":"cc.Vec3","x":1,"y":1,"z":1}}],{"__type__":"cc.SpriteFrame","content":{"name":"gold","texture":"99zidzwohNZ5hoJ7uNXp6p","rect":[0,0,80,80],"offset":[0,0],"originalSize":[80,80]}}]
+[
+  [
+    {
+      "__type__": "cc.Prefab",
+      "_name": "goldcoin",
+      "data": {
+        "__id__": 1
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "goldcoin",
+      "_children": [
+        {
+          "__id__": 2
+        },
+        {
+          "__id__": 3
+        }
+      ],
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.RigidBody",
+          "node": {
+            "__id__": 1
+          },
+          "_allowSleep": false,
+          "enabledContactListener": true
+        },
+        {
+          "__type__": "cc.PhysicsCircleCollider",
+          "node": {
+            "__id__": 1
+          },
+          "_friction": 0.1,
+          "_restitution": 1
+        },
+        {
+          "__type__": "6a0c4GXwbRKVq/o6WXxBEX+",
+          "node": {
+            "__id__": 1
+          },
+          "label": {
+            "__id__": 4
+          }
+        }
+      ],
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 1
+        },
+        "asset": {
+          "__uuid__": "172FLCu7ZBeZfUdQQufagi"
+        },
+        "fileId": "57Qqd3e4RJsLsocs1k05CE"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "groupIndex": 3
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "gold",
+      "_parent": {
+        "__id__": 1
+      },
+      "_level": 2,
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 2
+          },
+          "_spriteFrame": {
+            "__uuid__": "a7F3ZqgbtMZ7QXau4AW1JU"
+          },
+          "_sizeMode": 0
+        }
+      ],
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 1
+        },
+        "asset": {
+          "__uuid__": "172FLCu7ZBeZfUdQQufagi"
+        },
+        "fileId": "e1lPWupK5Cu7v4Pish/k9/"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 40,
+        "height": 40
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "label",
+      "_parent": {
+        "__id__": 1
+      },
+      "_level": 2,
+      "_components": [
+        {
+          "__id__": 4
+        }
+      ],
+      "_prefab": {
+        "__type__": "cc.PrefabInfo",
+        "root": {
+          "__id__": 1
+        },
+        "asset": {
+          "__uuid__": "172FLCu7ZBeZfUdQQufagi"
+        },
+        "fileId": "c7K+kSDWlE+5wHnSiBy4VM"
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 63.62,
+        "height": 40
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 3
+      },
+      "_srcBlendFactor": 1,
+      "_useOriginalSize": false,
+      "_string": "Label",
+      "_N$string": "Label",
+      "_fontSize": 26,
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1
+    }
+  ],
+  [
+    {
+      "__type__": "cc.SceneAsset",
+      "_name": "test",
+      "scene": {
+        "__id__": 1
+      },
+      "asyncLoadAssets": null
+    },
+    {
+      "__type__": "cc.Scene",
+      "_name": "New Node",
+      "_children": [
+        {
+          "__id__": 2
+        }
+      ],
+      "_anchorPoint": {
+        "__type__": "cc.Vec2"
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 0.22421875,
+        "y": 0.22421875,
+        "z": 1
+      },
+      "autoReleaseAssets": false
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Canvas",
+      "_parent": {
+        "__id__": 1
+      },
+      "_children": [
+        {
+          "__id__": 3
+        }
+      ],
+      "_components": [
+        {
+          "__type__": "cc.Canvas",
+          "node": {
+            "__id__": 2
+          },
+          "_designResolution": {
+            "__type__": "cc.Size",
+            "width": 720,
+            "height": 1280
+          }
+        },
+        {
+          "__type__": "f20e9mCoPNLeILhNkAPYAKF",
+          "node": {
+            "__id__": 2
+          },
+          "goldprefab": {
+            "__uuid__": "172FLCu7ZBeZfUdQQufagi"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 720,
+        "height": 1280
+      },
+      "_position": {
+        "__type__": "cc.Vec3",
+        "x": 360,
+        "y": 640
+      },
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "_id": "f4b8VvlgxDSL2n8yojLaly"
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "Main Camera",
+      "_parent": {
+        "__id__": 2
+      },
+      "_level": 1,
+      "_components": [
+        {
+          "__type__": "cc.Camera",
+          "node": {
+            "__id__": 3
+          },
+          "_clearFlags": 7,
+          "_depth": -1
+        }
+      ],
+      "_scale": {
+        "__type__": "cc.Vec3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    }
+  ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "gold",
+      "texture": "99zidzwohNZ5hoJ7uNXp6p",
+      "rect": [
+        0,
+        0,
+        80,
+        80
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        80,
+        80
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

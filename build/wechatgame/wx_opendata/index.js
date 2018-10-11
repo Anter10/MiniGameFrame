@@ -356,7 +356,7 @@ function drawFriendRank(drawdata) {
  * 得到群组的的好友数据 用于显示群组排行榜使用
  * tshareTicket: String 群组的shareticketID
  */
-getGroupFriendData = function (tshareTicket) {
+var getGroupFriendData = function (tshareTicket) {
     var shareTicket = tshareTicket;
     wx.getUserInfo({
         openIdList: ['selfOpenId'],

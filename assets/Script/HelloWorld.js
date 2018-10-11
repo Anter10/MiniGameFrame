@@ -12,7 +12,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-         
         WXSdk.checkIsUserAdvisedToRest();
         WXSdk.onShow();
         WXSdk.onShareAppMessage();

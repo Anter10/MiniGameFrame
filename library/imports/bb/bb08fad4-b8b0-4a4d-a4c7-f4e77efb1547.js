@@ -1,6 +1,6 @@
 "use strict";
 cc._RF.push(module, 'bb08frUuLBKTaTH9Od++xVH', 'WebSocket');
-// WXFrame/WebSocket.js
+// MGFrame/WebSocket.js
 
 'use strict';
 

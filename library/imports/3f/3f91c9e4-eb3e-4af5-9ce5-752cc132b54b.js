@@ -1,6 +1,6 @@
 "use strict";
 cc._RF.push(module, '3f91cnk6z5K9ZzldSzBMrVL', 'Http');
-// WXFrame/Http.js
+// MGFrame/Http.js
 
 'use strict';
 
